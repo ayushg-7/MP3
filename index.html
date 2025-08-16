@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Mindease</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo-container">
+    <img src="MindEase Logo_ Tranquility in Design.png" alt="MindEase Logo" class="logo-img">
+    <div class="logo-text">MindEase</div>
+  </div>
+
+    <!--<div class="logo">Mindease</div> -->
+    
+    <ul class="nav-links">
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#therapy-sessions">Therapy Sessions</a></li>
+      <li><a href="#breathing-exercises">Mindfulness & Breathing</a></li>
+      <li><a href="#relaxation-tools">Relaxation Tools</a></li>
+      <li><a href="#know-more">Know More</a></li>
+      <li>
+        <button id="toggle-theme">Toggle Theme</button>
+      </li>
+    </ul>
+  </nav>
+  <main>
+    <section class="center-section">
+      <div class="card">
+        <h2 id="motivation-quote"></h2>
+        <button id="new-quote-btn" class="new-quote-btn">New Motivation</button>
+        <div class="auth-buttons">
+          <button id="loginBtn">Login</button>
+          <button id="signupBtn">Sign Up</button>
+        </div>
+      </div>
+      <div class="pomodoro-card">
+        <h3>Pomodoro Timer</h3>
+        <div class="pomodoro-visual">
+          <svg class="progress-ring" height="120" width="120">
+            <circle class="progress-ring__circle-bg" stroke="#74f28e" stroke-width="10" fill="transparent" r="50" cx="60" cy="60" />
+            <circle class="progress-ring__circle" stroke="#34a853" stroke-width="10" fill="transparent" r="50" cx="60" cy="60" />
+          </svg>
+          <div id="timer" class="pomodoro-timer">25:00</div>
+        </div>
+        <div class="pomodoro-controls">
+          <button id="start">Start</button>
+          <button id="pause">Pause</button>
+          <button id="reset">Reset</button>
+        </div>
+        <div class="pomodoro-set">
+          <label for="pomodoroLength">Set Time (min): </label>
+          <input type="number" min="10" max="60" id="pomodoroLength" value="25">
+        </div>
+        <div class="pomodoro-stats">
+          <span>Sessions Completed: <span id="sessionsCount">0</span></span>
+        </div>
+      </div>
+    </section>
+    <section id="tips" class="info-section">
+      <h3>Wellness Tips</h3>
+      <p id="randomTip">Take a few deep breaths and be present for a moment.</p>
+      <button id="newTipBtn" class="new-tip-btn">New Tip</button>
+    </section>
+    <section id="contact" class="info-section">
+      <h3>Contact</h3>
+      <p>Email: support@mindease.com</p>
+      <p>Phone: +1-234-567-8901</p>
+    </section>
+    <section id="therapy-sessions" class="info-section">
+      <h3>Therapy Sessions</h3>
+      <p>Book a session with a certified therapist and track your progress.</p>
+      <button class="info-action">Book Now</button>
+    </section>
+    <section id="breathing-exercises" class="info-section">
+      <h3>Mindfulness & Breathing Exercises</h3>
+      <p>Guided exercises and techniques to reduce anxiety and improve focus.</p>
+      <button class="info-action">Try Exercise</button>
+    </section>
+    <section id="relaxation-tools" class="info-section">
+      <h3>Immersive Relaxation & VR Tools</h3>
+      <p>Relax with nature sounds and scenery or immersive VR visuals. </p>
+      <button class="info-action">Launch Experience</button>
+    </section>
+    <section id="know-more" class="info-section">
+      <h3>Know More</h3>
+      <p>Discover articles, videos, and guides about mental wellness habits.</p>
+      <button class="info-action">Explore</button>
+    </section>
+  </main>
+  <!-- Login/Signup Popup Modal -->
+  <div id="modal-overlay" class="modal-overlay hidden">
+    <div class="modal-content">
+      <span id="closeModal" class="close-modal">&times;</span>
+      <h3 id="modalTitle">Sign In</h3>
+      <form id="authForm">
+        <label for="email">Email:</label>
+        <input type="email" id="email" required placeholder="Enter your email">
+        <label for="password">Password:</label>
+        <input type="password" id="password" required placeholder="Password">
+        <button type="submit" class="modal-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
